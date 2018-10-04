@@ -1,0 +1,4 @@
+[logfiles]
+ParallelRoot : logneigh00 
+top : logneigh02 
+neighbour : logneigh01 
