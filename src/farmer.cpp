@@ -151,5 +151,5 @@ Model &Farmer::outputFunction(const CollectMessage &msg)
 		    
 
 Real fuzzy(Real usd, Real amb){
-	return ( min(usd,amb) + (min((1-usd), amb) *0.1) + (min (usd, (1-amb)) *0.8))/( min(usd,amb) + min((1-usd), amb) + min (usd, (1-amb)) + min((1-usd), (1-amb)) );
+	return ( min(usd,amb) + (min((usd-1)*-1, amb) *0.1) + (min (usd, (amb-1)*-1) *0.8))/( min(usd,amb) + min((usd-1)*-1, amb) + min (usd, (amb-1)*-1) + min((usd-1)*-1, (amb-1)*-1) );
 }
