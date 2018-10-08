@@ -1,0 +1,8 @@
+[logfiles]
+ParallelRoot : ltest700 
+top : ltest706 
+neighbour : ltest701 
+growing_field : ltest704 
+field : ltest702 
+table : ltest703 
+farmer : ltest705 
