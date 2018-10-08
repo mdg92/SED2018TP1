@@ -126,7 +126,7 @@ Model &Farmer::externalFunction(const ExternalMessage &msg)
 		
 		int dice = std::rand() %100;
 		//ERROR: Hacer funcion FUZZY propia y comparar con dice yt luego con la del VECINO
-		if ( (fuzzy(this->s_usd, this->s_amb)*100) < dice && (fuzzy(this->s_usd, this->s_amb)< fuzzy(n_s_usd, n_s_amb)) this->field_saved = this->field_neighbour;
+		if ( (fuzzy(this->s_usd, this->s_amb)*100) < dice && (fuzzy(this->s_usd, this->s_amb)< fuzzy(n_s_usd, n_s_amb))) this->field_saved = this->field_neighbour;
 		holdIn(AtomicState::active, VTime(0,0,0,0));
 	}else{
 		passivate();
