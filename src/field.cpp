@@ -29,9 +29,15 @@ Model &Field::initFunction()
 
 Model &Field::externalFunction(const ExternalMessage &msg)
 {
+	//[(!) update common variables]	
+	this->sigma = nextChange();	
+	this->elapsed = msg.time()-lastChange();
+	this->timeLeft = this->sigma - this->elapsed;
 	if (this->content == Tuple<Real> {0,0,0} ){
 		this->content = Tuple<Real>::from_value(msg.value());
 		holdIn(AtomicState::active, VTime(365,0,0,0));
+	}else{
+		holdIn(AtomicState::active, timeLeft);
 	}
 	
 	return *this;
